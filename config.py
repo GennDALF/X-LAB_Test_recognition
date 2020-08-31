@@ -1,6 +1,6 @@
 
-API_KEY = "ZU4KjCJojHDcIc93vuFeobqyh35t0F1jP8KTDTbhkwo=TestCandidate"
-SECRET_KEY = "L1+iWOCHtxbLftTsAf1jyfKFm1bYwE86i3cT/t+IczE="
+API_KEY = "key"
+SECRET_KEY = "secret-key"
 
 POSITIVE_WORDS = [
     "да",
