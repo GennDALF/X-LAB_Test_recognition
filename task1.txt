@@ -33,15 +33,3 @@
 6. Удаляет .wav файл;
 
 7. Обрабатывает возникающие ошибки и логирует их в отдельный файл.
-
-Примеры аудио:
-https://drive.google.com/file/d/1x2OjODQcfofTYmfTzOh6g-BSUCQR5n9e/view?usp=sharing
-https://drive.google.com/file/d/1Z4txUWnJlCsFCASweLQorGFoh2rqCHBm/view?usp=sharing
-https://drive.google.com/file/d/1lo3aeklH4ypXzpMPZE9yBqNU32fZuedr/view?usp=sharing
-https://drive.google.com/file/d/16_OgwayBAZPndK4gcoZOYB-RDavD26k2/view?usp=sharing
-
-api-key ZU4KjCJojHDcIc93vuFeobqyh35t0F1jP8KTDTbhkwo=TestCandidate
-secret-key L1+iWOCHtxbLftTsAf1jyfKFm1bYwE86i3cT/t+IczE=
-
-Результат: ссылка на репозиторий.
-Важно api-key и secret-key не должно быть в репозитории.
