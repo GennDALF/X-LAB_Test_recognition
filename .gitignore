@@ -3,3 +3,5 @@
 /.idea
 *debug*
 *temp*
+*.wav
+*.txt

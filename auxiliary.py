@@ -25,7 +25,7 @@ def process_answer(text, string_return=False):
     elif any(word in text.split() for word in POSITIVE_WORDS) and \
             not any(word in text for word in NEGATIVE_WORDS):
         if not string_return:
-            return 0
+            return 1
         else:
             return "positive"
     else:
@@ -36,6 +36,6 @@ def process_answer(text, string_return=False):
         #   (c) our client is far from 3-sigma interval and we can forget him
         #  anyway this case should be processed by a person
         if not string_return:
-            return 0
+            return -1
         else:
             return "unclear"

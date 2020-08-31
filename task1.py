@@ -119,7 +119,7 @@ except Exception as e:
 try:
     # result dictionary for this iteration
     result = {
-        'datetime': dt.now().strftime("%Y.%m.%d %H:%M:%S"),
+        'datetime': dt.now().strftime("%Y-%m-%d %H:%M:%S"),
         'id': oper_id,
         'action_result': action_result,
         'phone_number': args[1],

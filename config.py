@@ -1,6 +1,6 @@
 
-API_KEY = "key"
-SECRET_KEY = "secret-key"
+API_KEY = "ZU4KjCJojHDcIc93vuFeobqyh35t0F1jP8KTDTbhkwo=TestCandidate"
+SECRET_KEY = "L1+iWOCHtxbLftTsAf1jyfKFm1bYwE86i3cT/t+IczE="
 
 POSITIVE_WORDS = [
     "да",
@@ -31,7 +31,9 @@ DB_CREATE_RESULTS_TABLE = (f"CREATE TABLE IF NOT EXISTS {DB_TABLE} (\n"
                            "  action_result TEXT NOT NULL,\n"
                            "  phone_number TEXT NOT NULL,\n"
                            "  speech_duration NUMERIC NOT NULL,\n"
-                           "  recognition_result INTEGER NOT NULL);")
+                           "  recognition_result INTEGER NOT NULL,\n"
+                           "  project_id INTEGER REFERENCES project (id),\n"
+                           "  server_id INTEGER REFERENCES  server (id));")
 DB_INSERT_QUERY = (f"INSERT INTO {DB_TABLE} \n"
                    "   ({}) \n"
                    "VALUES ({})")
