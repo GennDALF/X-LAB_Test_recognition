@@ -34,7 +34,6 @@ audio_config = {
     "sample_rate_hertz": 8000,
     "num_channels": 1
 }
-errors = []
 
 # =================================== STEP 1 ===================================
 # input string format:
@@ -49,33 +48,7 @@ args = input().split()
 # for _ in range(4):
 #     args.append(input())
 # check for correct input
-if len(args) == 4:
-    if args[0][-3:] != "wav":
-        errors.append(f"{oper_id}. Wrong input: expected WAV file\n")
-    if not args[1].isdigit():
-        errors.append(f"{oper_id}. Wrong input: expected only digits in phone number\n")
-    # 11 digits if it will process only russian phone numbers
-    #  change for other standards
-    if len(args[1]) != 11:
-        errors.append(f"{oper_id}. Wrong input: expected 11 digits phone number\n")
-    if args[2].lower() in ['1', 'i', 'a', 'first', 'первый']:
-        args[2] = 1
-    elif args[2].lower() in ['2', 'ii', 'b', 'second', 'второй']:
-        args[2] = 2
-    # for next phases in future
-    # elif args[2].lower() in ['3', 'iii', 'c', 'third', 'третий']:
-    #     args[2] = 3
-    else:
-        errors.append(f"{oper_id}. Wrong input: expected existing recognition phase number\n")
-    if args[3] in ['0', 'False', 'no', 'нет']:
-        args[3] = False
-    elif args[3] in ['1', 'True', 'yes', 'да']:
-        args[3] = True
-    else:
-        errors.append(f"{oper_id}. Wrong input: expected boolean-like database flag\n")
-else:
-    errors.append(f"{oper_id}. Wrong input: expected 4 arguments\n")
-
+errors = check_input(oper_id, args)
 # it had been decided to process and log all input errors before interrupt the script
 if errors:
     raise ScriptFailure("Step 1 failure. Check errors.log", errors)
